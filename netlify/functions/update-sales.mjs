@@ -41,5 +41,3 @@ export default async () => {
   console.log(`已更新 ${items.length} 个属性的销量数据。`)
   return new Response(null, { status: 204 })
 }
-
-export const config = { schedule: "*/15 * * * *" }
