@@ -1,7 +1,7 @@
 import { getStore } from "@netlify/blobs"
 
 const ITEM_URL = "https://k.youshop10.com/lHv-7QIv?a=b&p=iphone&wfr=BuyercopyURL&share_relation=e155a80fa1b026af_1388062718_1"
-const INITIAL_STOCK = 99999
+const INITIAL_STOCK = 999999
 
 function readItems(html) {
   const patterns = [
