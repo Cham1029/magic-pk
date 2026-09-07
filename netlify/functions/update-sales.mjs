@@ -1,6 +1,6 @@
 import { getStore } from "@netlify/blobs"
 
-const ITEM_URL = "https://k.youshop10.com/lHv-7QIv?a=b&p=iphone&wfr=BuyercopyURL&share_relation=e155a80fa1b026af_1388062718_1"
+const ITEM_URL = "https://k.youshop10.com/3SKw6j21?a=b&p=iphone&wfr=BuyercopyURL&share_relation=fcf92045a6f0531c_1388062718_1"
 const INITIAL_STOCK = 999999
 
 function readItems(html) {
@@ -29,7 +29,7 @@ export default async () => {
   if (!response.ok) throw new Error(`商品页请求失败：${response.status}`)
 
   const items = readItems(await response.text())
-  if (items.length < 18) throw new Error(`属性数量异常：预期至少 18，实际 ${items.length}`)
+  if (items.length !== 10) throw new Error(`属性数量异常：预期 10，实际 ${items.length}`)
 
   const snapshot = {
     updatedAt: new Date().toISOString(),
