@@ -2,31 +2,639 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#fbf5df">
-  <title>远宇宙魔法属性 PK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfff4">
+  <title>2026 活动计划｜CHENZHEYUAN</title>
   <style>
-    :root{--paper:#fff9e9;--lav:#9d9ac5;--mint:#9fcfca;--blue:#7bbcc9;--ink:#777392;--gold:#d9bb70;--pink:#dfb9c3;--line:rgba(139,134,174,.32)}
-    *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}body{min-width:320px;background:#ede6d7;color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75}.page{width:min(100%,560px);margin:auto;min-height:100vh;overflow:hidden;background-color:var(--paper);background-image:radial-gradient(rgba(139,134,174,.12) .7px,transparent .8px),radial-gradient(rgba(159,207,202,.1) .7px,transparent .8px);background-position:0 0,14px 16px;background-size:20px 20px;box-shadow:0 0 32px rgba(101,90,106,.12)}
-    header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:13px 20px;background:rgba(255,249,233,.9);border-bottom:1px dashed rgba(157,154,197,.55);backdrop-filter:blur(8px)}.brand{color:var(--lav);font-size:11px;font-weight:700;letter-spacing:2px;text-decoration:none}.nav{display:flex;gap:14px}.nav a{color:var(--ink);font-size:12px;text-decoration:none}
-    .hero{min-height:650px;position:relative;display:flex;align-items:flex-end;padding:28px 22px 42px;text-align:center;background:linear-gradient(180deg,rgba(255,249,233,.08) 35%,rgba(255,249,233,.96) 88%),url("assets/magic-castle.jpg") center top/cover no-repeat}.hero:before{content:"✦　✧　✦　✧　✦";position:absolute;top:23px;left:0;width:100%;color:rgba(139,174,194,.72);font-size:16px;letter-spacing:7px;transform:rotate(-2deg)}.hero-card{width:100%;padding:23px 17px 21px;background:rgba(255,250,237,.8);border:1px dashed rgba(139,134,174,.6);border-radius:18px 12px 17px 13px;box-shadow:3px 4px 0 rgba(207,204,226,.34)}.eyebrow,.heading .en{color:var(--blue);font-size:10px;font-weight:700;letter-spacing:2px}.eyebrow{margin-bottom:7px}h1,h2{font-family:"Songti SC","STSong",serif;color:var(--lav)}h1{font-size:clamp(27px,7vw,37px);line-height:1.27;letter-spacing:3px}h1 span{display:block;margin-top:6px;color:var(--mint);font-size:.48em;letter-spacing:4px}.hero-copy{margin:12px auto 17px;color:#8985a1;font-size:13px}.button{display:inline-block;padding:10px 20px;color:#fffdf5;background:var(--lav);border:2px solid rgba(255,255,255,.8);border-radius:20px 18px 20px 17px;box-shadow:2px 3px 0 rgba(126,121,164,.35);font-size:12px;letter-spacing:1.5px;text-decoration:none}.hero-caption{position:absolute;bottom:12px;left:0;width:100%;color:rgba(137,133,161,.7);font-size:10px;letter-spacing:2px}
-    .section{position:relative;padding:43px 21px}.section+.section{border-top:1px dashed var(--line)}.section:before{content:"✦";position:absolute;top:-11px;left:50%;transform:translateX(-50%);padding:0 12px;background:var(--paper);color:var(--pink);font-size:15px}.heading{text-align:center;margin-bottom:24px}.heading .en{display:block;margin-bottom:4px}.heading h2{font-size:22px;letter-spacing:5px}.divider{color:var(--gold);font-size:11px;letter-spacing:7px;margin-top:7px}.intro{text-align:center;color:#85819b;font-size:13px}.shop{margin-top:22px;padding:17px;text-align:center;background:rgba(220,217,236,.32);border:1px solid rgba(157,154,197,.4);border-radius:16px 11px 15px 12px}.shop strong{display:block;color:var(--lav);font-size:15px;letter-spacing:2px}.shop p{font-size:12px;color:#87839f}.shop .rate{color:var(--blue);font-weight:700;margin-top:7px}
-    .rank-status,.sales-time{text-align:center;color:#aaa6bb;font-size:11px}.sales-board{display:grid;gap:9px;margin-top:18px}.sales-row{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:8px;padding:10px 12px;background:rgba(255,254,247,.72);border:1px dashed rgba(159,207,202,.65);border-radius:11px 8px 10px 9px}.sales-row:nth-child(even){border-color:rgba(223,185,195,.62);background:rgba(255,247,241,.62)}.sales-rank{color:var(--gold);font-size:11px;font-weight:700}.sales-name{color:#777392;font-size:13px;font-weight:700}.sales-count{color:var(--lav);font-size:12px;font-weight:700}
-    .report-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0}.report-stat{padding:12px 8px;text-align:center;background:rgba(220,217,236,.32);border:1px dashed rgba(157,154,197,.5);border-radius:12px 8px 11px 9px}.report-stat strong{display:block;color:var(--lav);font-size:20px;line-height:1.2}.report-stat span{font-size:11px}.report-block{margin-top:14px;padding:17px 14px;background:rgba(255,254,247,.72);border:1px dashed rgba(159,207,202,.75);border-radius:14px 10px 15px 11px}.report-block:nth-of-type(2){border-color:rgba(223,185,195,.72);background:rgba(255,247,241,.68)}.report-title{text-align:center;color:var(--lav);font-size:15px;letter-spacing:2px;margin-bottom:12px}.podium-row{display:flex;justify-content:center;align-items:stretch;gap:8px;margin-top:8px}.podium-card{flex:1;min-width:0;padding:8px 4px;text-align:center;border-bottom:1px dotted rgba(157,154,197,.4);color:#807c99}.podium-card .rank{display:block;color:var(--gold);font-size:10px;font-weight:700}.podium-card .name{display:block;margin-top:2px;font-weight:700;white-space:nowrap}.podium-card .score{display:block;color:var(--lav);font-size:.85em;font-style:normal}.podium-row.first .podium-card{flex:0 1 55%;padding:8px 7px;border:1px dashed rgba(217,187,112,.62);border-radius:13px 9px 12px 10px;background:rgba(255,252,236,.7);font-size:16px}.podium-row.first .rank{font-size:10px}.podium-row.first .name::before{content:"♕";color:var(--gold);font-size:13px;margin-right:4px;vertical-align:1px}.podium-row.second .podium-card{font-size:15px}.podium-row.third .podium-card{font-size:12px}.student-podium .podium-row.first .podium-card{flex-basis:60%;font-size:15px}.student-podium .podium-row.second .podium-card{font-size:13px}.student-podium .podium-row.third .podium-card{font-size:11px}
-    .rounds,.prizes{display:grid;gap:14px}.round,.prize{padding:19px 16px;background:rgba(255,254,247,.76);border:1px dashed rgba(157,154,197,.58);border-radius:15px 10px 14px 11px;box-shadow:2px 3px 0 rgba(217,213,231,.45)}.round:nth-child(even),.prize:nth-child(even){background:rgba(236,247,240,.62)}.revival{background:rgba(253,242,243,.7)!important;border-color:rgba(223,185,195,.7)!important}.round-top{display:flex;justify-content:space-between;gap:10px}.round-num{color:var(--blue);font-size:10px;font-weight:700}.round h3,.prize h3{color:var(--lav);font-size:16px;margin:2px 0 6px}.date{color:#ba9e6f;font-size:10px;text-align:right}.round p,.prize li{font-size:12px}.result{font-weight:700;margin-top:7px}.honor{margin-top:17px;padding:13px 14px;background:rgba(220,217,236,.25);border-left:3px solid var(--mint);font-size:12px}.prize-icon{font-size:22px}.prize ul{list-style:none}.prize li:before{content:"✦";color:var(--mint);font-size:9px;margin-right:7px}.unlocked{display:inline-block;margin-left:5px;padding:1px 6px;color:#fff;background:var(--mint);border-radius:9px;font-size:9px;font-style:normal}.reward-showcase{margin-top:18px;padding:10px;background:rgba(220,217,236,.26);border:1px dashed rgba(157,154,197,.55);border-radius:14px 10px 15px 11px}.reward-showcase img{display:block;width:100%;border-radius:9px 6px 9px 6px}.reward-caption{text-align:center;color:var(--lav);font-size:11px;letter-spacing:1px;margin-top:8px}.note{margin-top:8px;color:#aaa6bb;font-size:10px}.cta{padding:49px 22px 55px;text-align:center;background:linear-gradient(180deg,rgba(220,217,236,.33),rgba(255,249,233,.3))}.cta p{font-size:13px;margin:11px 0 20px}footer{padding:18px;text-align:center;border-top:1px dashed var(--line);color:#aaa6bb;font-size:10px}
+    :root {
+      --paper: #fbfff4;
+      --wash: #efffda;
+      --ink: #317322;
+      --ink-dark: #176312;
+      --muted: #5f8954;
+      --line: #38a526;
+      --line-soft: rgba(56, 165, 38, .32);
+      --serif: "Times New Roman", "Songti SC", "STSong", serif;
+      --sans: "PingFang SC", "Microsoft YaHei", sans-serif;
+      --hand: "HanziPen SC", "STKaiti", "KaiTi", "Bradley Hand", cursive;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: var(--ink);
+      background: #edf5e9;
+      font-family: var(--sans);
+    }
+    .page {
+      position: relative;
+      width: min(100%, 920px);
+      margin: 0 auto;
+      overflow: hidden;
+      background:
+        radial-gradient(rgba(49, 115, 34, .045) .7px, transparent .8px) 0 0 / 7px 7px,
+        linear-gradient(180deg, #f7fff0 0%, #fff 48%, #fbfff2 100%);
+      box-shadow: 0 0 45px rgba(37, 93, 31, .12);
+    }
+    .topline {
+      display: grid;
+      grid-template-columns: 120px 1fr 120px;
+      gap: 18px;
+      align-items: start;
+      padding: 31px 48px 16px;
+      font-family: var(--serif);
+      color: var(--ink-dark);
+    }
+    .year-tag {
+      font-size: 18px;
+      line-height: 1;
+    }
+    .year-tag:last-child { text-align: right; }
+    .quote {
+      margin: 0;
+      font-size: 9px;
+      font-weight: 700;
+      line-height: 1.35;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .cover {
+      position: relative;
+      padding: 22px 48px 0;
+    }
+    .side-word {
+      position: absolute;
+      z-index: 2;
+      color: var(--ink-dark);
+      font-family: var(--serif);
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .side-word.left {
+      top: 340px;
+      left: 22px;
+      transform: rotate(-90deg);
+      transform-origin: left top;
+    }
+    .side-word.right {
+      top: 59px;
+      right: 20px;
+      writing-mode: vertical-rl;
+    }
+    .photo-card {
+      position: relative;
+      width: min(100%, 750px);
+      min-height: 500px;
+      margin: 0 auto;
+      background: rgba(221, 255, 192, .48);
+      transform: rotate(-.8deg);
+    }
+    .photo-card::before {
+      content: "";
+      position: absolute;
+      inset: 38px 26px 72px;
+      background: url("assets/reference-plan.jpg") center 4% / 100% auto no-repeat;
+      filter: saturate(1.25) contrast(.98);
+    }
+    .photo-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(0deg, transparent 0 87%, rgba(183, 255, 116, .18) 87% 100%),
+        radial-gradient(circle at 45% 46%, rgba(255, 255, 255, .28), transparent 28%);
+      pointer-events: none;
+    }
+    .big-hand {
+      position: absolute;
+      right: -19px;
+      top: 118px;
+      z-index: 3;
+      color: var(--ink-dark);
+      font-family: var(--hand);
+      font-size: clamp(58px, 10vw, 104px);
+      font-weight: 400;
+      line-height: .98;
+      letter-spacing: 4px;
+      writing-mode: vertical-rl;
+      transform: rotate(-8deg);
+    }
+    .cover-title-row {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      width: min(100%, 750px);
+      margin: -45px auto 0;
+      color: var(--ink-dark);
+    }
+    .brand {
+      font-family: var(--serif);
+      font-size: clamp(30px, 5vw, 47px);
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+    .hand-note {
+      font-family: var(--hand);
+      font-size: clamp(19px, 3vw, 31px);
+      transform: rotate(-4deg);
+    }
+    .main-title {
+      margin: 47px 0 142px;
+      color: var(--ink-dark);
+      font-family: var(--serif);
+      font-size: clamp(22px, 3.4vw, 35px);
+      font-weight: 700;
+      letter-spacing: .4px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .logo-lockup {
+      margin: 0 0 55px;
+      text-align: center;
+    }
+    .script-mark {
+      position: relative;
+      display: inline-block;
+      color: var(--ink-dark);
+      font-family: var(--hand);
+      font-size: clamp(28px, 6vw, 54px);
+      line-height: 1;
+      transform: rotate(-5deg);
+    }
+    .script-mark::before {
+      content: "";
+      position: absolute;
+      left: -90px;
+      right: -82px;
+      top: 1px;
+      height: 92px;
+      border: 6px solid rgba(155, 244, 106, .24);
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      transform: rotate(-11deg);
+      pointer-events: none;
+    }
+    .script-mark small {
+      color: #a4dc19;
+      font-family: var(--serif);
+      font-size: .42em;
+      font-weight: 700;
+      vertical-align: .25em;
+    }
+    .subtitle {
+      margin: 12px 0 0;
+      color: var(--ink-dark);
+      font-family: var(--serif);
+      font-size: clamp(23px, 3.6vw, 36px);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .section {
+      padding: 0 48px 78px;
+    }
+    .label-box {
+      display: flex;
+      min-height: 56px;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      max-width: 100%;
+      padding: 6px 38px 9px;
+      margin: 0 auto;
+      border: 2px solid var(--line);
+      background: rgba(239, 255, 218, .86);
+      color: var(--ink);
+      font-family: var(--hand);
+      font-size: clamp(22px, 3.7vw, 34px);
+      font-weight: 400;
+      line-height: 1;
+      transform: rotate(-1deg);
+    }
+    .label-box.overlap {
+      position: relative;
+      z-index: 2;
+      margin-bottom: -26px;
+    }
+    .table-box {
+      padding: 62px 31px 25px;
+      border: 2px solid rgba(56, 165, 38, .72);
+      background:
+        linear-gradient(135deg, rgba(251, 255, 246, .96) 0%, rgba(231, 255, 209, .82) 48%, rgba(248, 255, 239, .98) 100%);
+    }
+    .plan-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 17px;
+    }
+    .plan-table th {
+      padding: 5px 9px 7px;
+      color: var(--paper);
+      background: var(--ink);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .plan-table th + th { border-left: 28px solid transparent; }
+    .plan-table td {
+      padding: 22px 9px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .plan-table td:first-child {
+      width: 23%;
+      padding-left: 0;
+      text-align: center;
+    }
+    .plan-table td:nth-child(2) { width: 13%; }
+    .plan-table td:nth-child(3) { width: 17%; }
+    .plan-table td:nth-child(4) { width: 12%; }
+    .plan-table td:nth-child(5) { width: 20%; }
+    .compact-lines { line-height: 1.32; }
+    .love-mark {
+      margin-top: 8px;
+      color: rgba(49, 115, 34, .60);
+      font-family: var(--serif);
+      font-size: 22px;
+      letter-spacing: 26px;
+      text-align: center;
+    }
+    .timeline-section { padding-top: 8px; }
+    .timeline-title {
+      margin-bottom: 48px;
+      font-size: clamp(20px, 3.6vw, 34px);
+    }
+    .timeline {
+      position: relative;
+      width: min(100%, 760px);
+      min-height: 840px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 50px;
+      bottom: 160px;
+      left: 50%;
+      width: 2px;
+      background:
+        linear-gradient(180deg, transparent, #86cb68 4%, #86cb68 96%, transparent);
+      transform: translateX(-50%);
+    }
+    .timeline::after {
+      display: none;
+    }
+    .timeline-year {
+      position: absolute;
+      top: -33px;
+      left: 50%;
+      color: var(--ink);
+      font-family: var(--hand);
+      font-size: 35px;
+      transform: translateX(-50%) rotate(-5deg);
+    }
+    .node {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      width: 19px;
+      height: 19px;
+      border: 4px solid var(--paper);
+      background: #6fbc54;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #78c75c;
+      transform: translateX(-50%);
+    }
+    .node.top { top: 43px; width: 13px; height: 13px; border-width: 2px; }
+    .node.one { top: 207px; }
+    .node.two { top: 458px; width: 15px; height: 15px; border-width: 3px; }
+    .node.three { top: 650px; }
+    .node.bottom { display: none; }
+    .item {
+      position: absolute;
+      width: 315px;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .item.left { left: 0; text-align: right; }
+    .item.right { right: 0; text-align: left; }
+    .item-content {
+      display: inline-block;
+      max-width: 100%;
+      text-align: center;
+      vertical-align: top;
+    }
+    .item-flower {
+      display: block;
+      width: 24px;
+      height: 20px;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 19px;
+      line-height: 1;
+    }
+    .item.left .item-flower { margin-left: auto; margin-right: 4px; transform: rotate(-12deg); }
+    .item.right .item-flower { margin-left: 4px; transform: rotate(12deg); }
+    .item.five .item-flower { margin-right: auto; margin-left: auto; transform: rotate(-5deg); }
+    .item.one { top: 77px; }
+    .item.two { top: 190px; }
+    .item.three { top: 386px; }
+    .item.four { top: 477px; }
+    .item.five {
+      top: 693px;
+      left: 50%;
+      width: 260px;
+      text-align: center;
+      transform: translateX(-50%);
+    }
+    .item.five::after { display: none; }
+    .item-title {
+      display: inline-block;
+      padding: 1px 14px 4px;
+      margin-bottom: 13px;
+      border: 2px solid var(--line);
+      background: rgba(239, 255, 218, .76);
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .activity-link,
+    .activity-inline-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    .activity-link:hover,
+    .activity-inline-link:hover {
+      color: var(--ink-dark);
+    }
+    .item p { margin: 0; }
+    .notice {
+      padding: 0 48px 16px;
+      text-align: center;
+    }
+    .notice-list {
+      display: inline-block;
+      margin: 0 0 42px;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: clamp(21px, 3.5vw, 34px);
+      line-height: 1.38;
+      text-align: left;
+    }
+    .rule {
+      width: 92%;
+      height: 4px;
+      margin: 0 auto 54px;
+      background: var(--ink);
+    }
+    .thanks {
+      margin: 0 0 49px;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: clamp(17px, 2.7vw, 27px);
+      line-height: 1.55;
+    }
+    .footer-title {
+      margin: 0 0 38px;
+      color: var(--ink-dark);
+      font-family: var(--serif);
+      font-size: clamp(18px, 3vw, 28px);
+      font-weight: 700;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+    }
+    .bottom-photo {
+      min-height: 300px;
+      margin: 0 -48px;
+      background: url("assets/reference-plan.jpg") center bottom / 100% auto no-repeat;
+      filter: saturate(1.2);
+    }
+
+    @media (max-width: 760px) {
+      .topline { grid-template-columns: 72px 1fr 72px; padding: 25px 24px 10px; }
+      .year-tag { font-size: 15px; }
+      .quote { font-size: 7px; }
+      .cover { padding: 17px 24px 0; }
+      .side-word.left { left: 8px; }
+      .side-word.right { right: 7px; }
+      .photo-card { min-height: 390px; }
+      .photo-card::before { inset: 28px 17px 55px; }
+      .cover-title-row { margin-top: -34px; }
+      .main-title { margin-bottom: 100px; }
+      .section { padding-right: 24px; padding-left: 24px; }
+      .table-box { padding: 55px 17px 20px; overflow-x: auto; }
+      .plan-table { min-width: 780px; }
+      .notice { padding-right: 24px; padding-left: 24px; }
+      .bottom-photo { margin-right: -24px; margin-left: -24px; }
+    }
+
+    @media (max-width: 560px) {
+      .topline { grid-template-columns: 48px 1fr 48px; gap: 7px; }
+      .year-tag { font-size: 12px; }
+      .cover { padding-right: 18px; padding-left: 18px; }
+      .side-word { display: none; }
+      .photo-card { min-height: 300px; }
+      .photo-card::before { inset: 20px 13px 44px; }
+      .big-hand { right: -12px; top: 74px; font-size: 51px; }
+      .brand { font-size: 28px; }
+      .hand-note { font-size: 17px; }
+      .main-title { margin: 34px 0 72px; }
+      .script-mark::before { left: -42px; right: -35px; height: 55px; border-width: 4px; }
+      .label-box { min-height: 47px; padding: 5px 20px 8px; }
+      .section { padding-right: 18px; padding-bottom: 60px; padding-left: 18px; }
+      .table-box { margin-right: -4px; margin-left: -4px; }
+      .plan-table { min-width: 650px; font-size: 15px; }
+      .plan-table th { font-size: 12px; }
+      .plan-table th + th { border-left-width: 12px; }
+      .plan-table td { padding: 18px 7px; }
+      .love-mark { font-size: 16px; letter-spacing: 15px; }
+      .timeline-title { margin-bottom: 38px; }
+      .timeline { min-height: 820px; }
+      .timeline::before { width: 2px; }
+      .timeline::after { display: none; }
+      .timeline-year { font-size: 27px; }
+      .node { width: 15px; height: 15px; border-width: 3px; }
+      .node.top, .node.bottom { width: 11px; height: 11px; border-width: 2px; }
+      .node.two { width: 13px; height: 13px; border-width: 2px; }
+      .item {
+        width: calc(50% - 28px);
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+      .item-title {
+        max-width: 100%;
+        padding: 2px 6px 4px;
+        margin-bottom: 7px;
+        font-size: 16px;
+        white-space: normal;
+      }
+      .item.one { top: 84px; }
+      .item.two { top: 181px; }
+      .item.three { top: 374px; }
+      .item.four { top: 470px; }
+      .item.five { top: 674px; width: 190px; }
+      .item.five::after { display: none; }
+      .notice { padding-right: 18px; padding-left: 18px; }
+      .rule { margin-bottom: 39px; }
+      .thanks { margin-bottom: 34px; }
+      .bottom-photo { min-height: 175px; margin-right: -18px; margin-left: -18px; }
+    }
   </style>
 </head>
-<body><main class="page">
-  <header><a class="brand" href="#top">CHEN ZHEYUAN</a><nav class="nav"><a href="#rank">销量</a><a href="#rule">赛制</a><a href="#prize">奖励</a></nav></header>
-  <section class="hero" id="top"><div class="hero-card"><p class="eyebrow">FINAL · FOUR TO ONE</p><h1>四强加冕<span>天穹决战 · 远宇宙魔法属性 PK</span></h1><p class="hero-copy">四强终极巅峰赛开启。四系全力汇聚魔法能量，向 2026 远宇宙最强属性魔法 TOP1 王座发起冲刺。</p><a class="button" href="https://k.youshop10.com/QwNcydOY?a=b&amp;p=iphone&amp;wfr=BuyercopyURL&amp;share_relation=5c57626beb7f72bb_1388062718_1" target="_blank" rel="noopener">✦ 进入四强加冕终决页</a></div><span class="hero-caption">BELIEVE IN MAGIC · LET YOUR HEART SHINE</span></section>
-  <section class="section"><div class="heading"><span class="en">WELCOME, YOUNG WIZARD</span><h2>魔法序章</h2><div class="divider">✦　✧　✦</div></div><p class="intro">星轨流转，流星划过夜空，蓝色魔法塔在星河驻足。手握魔法杖，接下星光任务，把点点魔法相互簇拥，齐力照亮整片宇宙星空。</p><div class="shop"><strong>🪄 魔法能量店铺</strong><p>VD远宇宙米饭制造厂</p><p class="rate">1 能量值 = 1.29 r = 1.29 魔法值</p></div></section>
-  <section class="section" id="rank"><div class="heading"><span class="en">MAGIC ENERGY RANKING</span><h2>属性销量魔法榜</h2><div class="divider">✦　✧　✦</div></div><p class="rank-status" id="sales-status">正在连接远宇宙魔法档案…</p><div class="sales-board" id="sales-board" hidden></div><p class="sales-time" id="sales-time"></p></section>
-  <section class="section" id="report"><div class="heading"><span class="en">ROUND 03· FINAL REPORT</span><h2>星轨角逐 · 十强对决</h2><div class="divider">✦　✧　✦</div></div><div class="report-stats"><div class="report-stat"><strong>281,576.04</strong><span>总魔法值</span></div><div class="report-stat"><strong>218,276</strong><span>总能量值</span></div></div><p class="sales-time">第三轮战报 · 10 进 4 · 已圆满结束</p></section>
-  <section class="section" id="rule"><div class="heading"><span class="en">MAGICAL ATTRIBUTE TOURNAMENT</span><h2>魔法属性 PK 赛制</h2><div class="divider">✦　✧　✦</div></div><div class="rounds"><article class="round"><div class="round-top"><div><span class="round-num">ROUND 01 · COMPLETED</span><h3>二十六星海选</h3></div><span class="date">9.03 10:29<br>— 9.05 10:29<br>已结束</span></div><p>星芒初醒 · 全员试炼。26 个魔法属性院系全员出战，按各院系魔法能量总值排名。</p><p class="result">总榜前 8 名院系，成功晋级十强席位。</p></article><article class="round revival"><div class="round-top"><div><span class="round-num">REVIVAL · COMPLETED</span><h3>星火归位 · 复活突围</h3></div><span class="date">9.06 10:29<br>— 9.07 10:29<br>已结束</span></div><p>试炼场内的院系重新累计魔法能量，再次角逐归位资格。</p><p class="result">榜单前 2 名重返魔法 PK 场。</p></article><article class="round"><div class="round-top"><div><span class="round-num">ROUND 02 · COMPLETED</span><h3>十强争锋</h3></div><span class="date">9.08 10:29<br>— 9.09 22:29<br>已结束</span></div><p>星轨角逐 · 十强对决。十大院系重新累计魔法能量，根据第二轮全新积分排名。</p><p class="result">榜单前 4 名院系，成功晋级四强巅峰席位。</p></article><article class="round revival"><div class="round-top"><div><span class="round-num">FINAL · 4 → 1 · LIVE</span><h3>四强加冕</h3></div><span class="date">9.11 10:29<br>— 9.13 22:29<br>限时 60H</span></div><p>天穹决战 · 登顶王座，四系全力汇聚魔法能量。</p><p class="result">最终积分最高院系，成为 2026 远宇宙最强属性魔法 TOP1。</p></article></div><p class="honor">✦ 止步十强院系获「星辉魔法师」专属荣誉及远宇宙魔法档案记录。</p></section>
-  <section class="section" id="prize"><div class="heading"><span class="en">REWARDS &amp; HONOURS</span><h2>魔法奖励</h2><div class="divider">✦　✧　✦</div></div><div class="prizes"><article class="prize"><span class="prize-icon">🏆</span><h3>荣誉奖励 · 属性专属</h3><ul><li>前 10 强获专属属性小卡</li><li>前 4 强获专属属性视频</li><li>属性 TOP1 获云包场冠名权</li></ul></article><article class="prize"><span class="prize-icon">🎁</span><h3>学员奖励 · 个人满赠</h3><ul><li>30 能量值：1 小卡 <em class="unlocked">已解锁</em></li><li>100 能量值：1 小卡 + 1 钥匙扣 <em class="unlocked">已解锁</em></li><li>150 能量值：加赠 1 小卡</li><li>300 能量值：加赠 1 卡套</li></ul></article><article class="prize"><span class="prize-icon">🌟</span><h3>目标里程碑 · 全员满赠</h3><ul><li>15 万：OK 绷贴纸 <em class="unlocked">已解锁</em></li><li>30 万：学生证</li><li>45 万：票根</li><li>70 万：杯垫</li></ul></article></div><div class="reward-showcase"><img src="assets/unlocked-rewards.jpg" alt="已解锁奖励：30能量值小卡、100能量值亚克力钥匙扣、15万魔法值贴纸"><p class="reward-caption">✦ 已解锁奖励展示 ✦</p></div></section>
-  <section class="cta" id="join"><div class="heading"><span class="en">THE STARS ARE WAITING</span><h2>点燃你的魔法能量</h2><div class="divider">✦　✧　✦</div></div><p>天穹终决已经开启，为你的属性院系汇聚最后的魔法能量。</p><a class="button" href="https://k.youshop10.com/QwNcydOY?a=b&amp;p=iphone&amp;wfr=BuyercopyURL&amp;share_relation=5c57626beb7f72bb_1388062718_1" target="_blank" rel="noopener">✦ 进入四强加冕终决页</a></section>
-  <footer>© 2026 陈哲远粉丝支持站 · 非官方个人应援网页</footer>
-</main><script>
-const fmt=new Intl.NumberFormat("zh-CN");
-fetch("/.netlify/functions/sales").then(r=>r.ok?r.json():Promise.reject()).then(data=>{const b=document.querySelector("#sales-board");document.querySelector("#sales-status").hidden=true;b.hidden=false;b.innerHTML=data.items.map((x,i)=>`<div class="sales-row"><span class="sales-rank">NO.${String(i+1).padStart(2,"0")}</span><span class="sales-name">${x.name}</span><span class="sales-count">${fmt.format(x.sold)} 能量</span></div>`).join("");document.querySelector("#sales-time").textContent=`数据更新：${new Date(data.updatedAt).toLocaleString("zh-CN",{hour12:false})} · 每 15 分钟同步`}).catch(()=>document.querySelector("#sales-status").textContent="销量数据将于部署至 Netlify 后自动同步。");
-</script></body></html>
+<body>
+  <main class="page">
+    <header class="topline">
+      <span class="year-tag">(1996)</span>
+      <p class="quote">THE SIGNIFICANCE OF OUR ENCOUNTER LIES IN THE PART OF ME THAT WAS TRANSFORMED BY YOU,<br>AS YOU WILL FOREVER BE THE ONE WHO ACCOMPANIES ME.</p>
+      <span class="year-tag">(1029)</span>
+    </header>
+
+    <section class="cover">
+      <span class="side-word left">LOVE FOR U</span>
+      <span class="side-word right">CHENZHEYUAN</span>
+      <div class="photo-card" aria-label="远宇宙活动主视觉">
+        <div class="big-hand">远宇宙</div>
+      </div>
+      <div class="cover-title-row">
+        <div class="brand">CHENZHEYUAN</div>
+        <div class="hand-note">2026年 Q3Q4 活动计划</div>
+      </div>
+      <h1 class="main-title">2026 ACTIVITY PLAN FOR CHENZHEYUAN</h1>
+      <div class="logo-lockup">
+        <div class="script-mark"><small>(1996)</small> 远宇宙米饭制造厂 <small>(1029)</small></div>
+        <p class="subtitle">2026 PLAN FOR CHENZHEYUAN</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="label-box overlap">未来活动进度</h2>
+      <div class="table-box">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>活动名称</th>
+              <th>修改地址</th>
+              <th>当前进度</th>
+              <th>发货时间</th>
+              <th>售后截止时间</th>
+              <th>活动明细</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>远宇宙地域PK战</td>
+              <td>－</td>
+              <td>已完成补邮</td>
+              <td>9/10</td>
+              <td>确认后7日内</td>
+              <td>未出</td>
+            </tr>
+            <tr>
+              <td>椰岛海盐卡册</td>
+              <td>－</td>
+              <td>余量售后中</td>
+              <td>9/8</td>
+              <td>非严重大瑕不再售后</td>
+              <td>未出</td>
+            </tr>
+            <tr>
+              <td class="compact-lines">【把黑夜点燃】<br>云包场PART1<br>择善寻真</td>
+              <td>等待通知</td>
+              <td class="compact-lines">订单整理<br>小卡打样选厂</td>
+              <td>10/31前</td>
+              <td>等待通知</td>
+              <td>未出</td>
+            </tr>
+            <tr>
+              <td>浮生杀青注水旗寄回</td>
+              <td>－</td>
+              <td>已完成寄回</td>
+              <td>9/5</td>
+              <td>－</td>
+              <td>－</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="love-mark">LOVEFORCHAM</div>
+      </div>
+    </section>
+
+    <section class="section timeline-section">
+      <h2 class="label-box timeline-title">2026年 远宇宙Q3 Q4活动计划</h2>
+      <div class="timeline">
+        <div class="timeline-year">2026年</div>
+        <span class="node top"></span>
+        <span class="node one"></span>
+        <span class="node two"></span>
+        <span class="node three"></span>
+        <span class="node bottom"></span>
+
+        <article class="item left one">
+          <div class="item-content">
+            <span class="item-flower" aria-hidden="true">✤</span>
+            <a class="item-title activity-link" href="magic-pk.html">远宇宙属性魔法学院</a>
+            <p>时间：9/3 10:29</p>
+            <p>目的：【把黑夜点燃】云包场PART 2</p>
+            <p>进度：已结束 · <a class="activity-inline-link" href="magic-pk.html">查看活动总结</a></p>
+          </div>
+        </article>
+        <article class="item right two">
+          <div class="item-content">
+            <span class="item-flower" aria-hidden="true">✤</span>
+            <div class="item-title">浮生x好好吃饭联名盲袋</div>
+            <p>时间：属性PK结束后</p>
+            <p>目的：陈哲远生日应援</p>
+            <p>进度：已企划</p>
+          </div>
+        </article>
+        <article class="item left three">
+          <div class="item-content">
+            <span class="item-flower" aria-hidden="true">✤</span>
+            <div class="item-title">实物小富翁</div>
+            <p>时间：2026/10</p>
+            <p>目的：陈哲远生日应援</p>
+            <p>进度：企划中</p>
+          </div>
+        </article>
+        <article class="item right four">
+          <div class="item-content">
+            <span class="item-flower" aria-hidden="true">✤</span>
+            <div class="item-title">生日礼包</div>
+            <p>时间：2026/11</p>
+            <p>目的：陈哲远生日应援</p>
+            <p>进度：企划中</p>
+          </div>
+        </article>
+        <article class="item five">
+          <div class="item-content">
+            <span class="item-flower" aria-hidden="true">✤</span>
+            <div class="item-title">2027年台历</div>
+            <p>时间：2026/12</p>
+            <p>目的：日常活动</p>
+            <p>进度：待企划</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="notice">
+      <p class="notice-list">1.如有开机/杀青应援会单独开设认领<br>2.生日应援开放单独认领项目另行通知</p>
+      <div class="rule"></div>
+      <p class="thanks">感谢全体元宝对远宇宙米饭制造厂活动的支持，敬请期待~</p>
+      <p class="footer-title">2026 ACTIVITY PLAN FOR CHENZHEYUAN</p>
+      <div class="bottom-photo" aria-label="活动计划底部视觉"></div>
+    </section>
+  </main>
+</body>
+</html>

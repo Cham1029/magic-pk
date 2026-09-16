@@ -4,6 +4,3 @@
 
 [functions]
   node_bundler = "esbuild"
-
-[functions."update-sales"]
-  schedule = "*/15 * * * *"

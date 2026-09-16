@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fbf5df">
+  <title>远宇宙魔法属性 PK · 圆满结束</title>
+  <style>
+    :root{--paper:#fff9e9;--lav:#9d9ac5;--mint:#9fcfca;--blue:#7bbcc9;--ink:#777392;--gold:#d9bb70;--pink:#dfb9c3;--line:rgba(139,134,174,.32)}
+    *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}body{min-width:320px;background:#ede6d7;color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75}.page{width:min(100%,560px);margin:auto;min-height:100vh;overflow:hidden;background-color:var(--paper);background-image:radial-gradient(rgba(139,134,174,.12) .7px,transparent .8px),radial-gradient(rgba(159,207,202,.1) .7px,transparent .8px);background-position:0 0,14px 16px;background-size:20px 20px;box-shadow:0 0 32px rgba(101,90,106,.12)}
+    header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:13px 20px;background:rgba(255,249,233,.9);border-bottom:1px dashed rgba(157,154,197,.55);backdrop-filter:blur(8px)}.brand{color:var(--lav);font-size:11px;font-weight:700;letter-spacing:2px;text-decoration:none}.nav{display:flex;gap:14px}.nav a{color:var(--ink);font-size:12px;text-decoration:none}.activity-link,.activity-inline-link{color:inherit;text-decoration:none}.activity-link:hover,.activity-inline-link:hover{color:var(--ink-dark)}
+    .hero{min-height:650px;position:relative;display:flex;align-items:flex-end;padding:28px 22px 42px;text-align:center;background:linear-gradient(180deg,rgba(255,249,233,.08) 35%,rgba(255,249,233,.96) 88%),url("assets/magic-castle.jpg") center top/cover no-repeat}.hero:before{content:"✦　✧　✦　✧　✦";position:absolute;top:23px;left:0;width:100%;color:rgba(139,174,194,.72);font-size:16px;letter-spacing:7px;transform:rotate(-2deg)}.hero-card{width:100%;padding:23px 17px 21px;background:rgba(255,250,237,.8);border:1px dashed rgba(139,134,174,.6);border-radius:18px 12px 17px 13px;box-shadow:3px 4px 0 rgba(207,204,226,.34)}.eyebrow,.heading .en{color:var(--blue);font-size:10px;font-weight:700;letter-spacing:2px}.eyebrow{margin-bottom:7px}h1,h2{font-family:"Songti SC","STSong",serif;color:var(--lav)}h1{font-size:clamp(27px,7vw,37px);line-height:1.27;letter-spacing:3px}h1 span{display:block;margin-top:6px;color:var(--mint);font-size:.48em;letter-spacing:4px}.hero-copy{margin:12px auto 0;color:#8985a1;font-size:13px}.hero-caption{position:absolute;bottom:12px;left:0;width:100%;color:rgba(137,133,161,.7);font-size:10px;letter-spacing:2px}
+    .section{position:relative;padding:43px 21px}.section+.section{border-top:1px dashed var(--line)}.section:before{content:"✦";position:absolute;top:-11px;left:50%;transform:translateX(-50%);padding:0 12px;background:var(--paper);color:var(--pink);font-size:15px}.heading{text-align:center;margin-bottom:24px}.heading .en{display:block;margin-bottom:4px}.heading h2{font-size:22px;letter-spacing:5px}.divider{color:var(--gold);font-size:11px;letter-spacing:7px;margin-top:7px}.intro{text-align:center;color:#85819b;font-size:13px}.report-block{margin-top:14px;padding:17px 14px;background:rgba(255,254,247,.72);border:1px dashed rgba(159,207,202,.75);border-radius:14px 10px 15px 11px}.report-title{text-align:center;color:var(--lav);font-size:15px;letter-spacing:2px;margin-bottom:12px}
+    .result-list{display:grid;gap:8px}.result-row{display:grid;grid-template-columns:43px 83px 1fr;gap:8px;align-items:start;padding:10px 8px;background:rgba(255,254,247,.7);border-bottom:1px dotted rgba(157,154,197,.38)}.result-row:last-child{border-bottom:0}.result-row:first-child{border:1px dashed rgba(217,187,112,.62);border-radius:13px 9px 12px 10px;background:rgba(255,252,236,.72)}.result-rank{color:var(--gold);font-size:11px;font-weight:700}.result-name{color:var(--lav);font-size:15px;font-weight:700;white-space:nowrap}.result-copy{color:#807c99;font-size:11px;line-height:1.55}
+    .honor{margin-top:17px;padding:13px 14px;background:rgba(220,217,236,.25);border-left:3px solid var(--mint);font-size:12px}.milestone{margin-top:14px;padding:17px 14px;background:rgba(236,247,240,.62);border:1px dashed rgba(159,207,202,.75);border-radius:14px 10px 15px 11px}.milestone h3{color:var(--lav);font-size:16px;margin-bottom:6px}.milestone p{font-size:12px}.milestone strong{color:var(--blue)}
+    .reward-showcase{margin-top:18px;padding:10px;background:rgba(220,217,236,.26);border:1px dashed rgba(157,154,197,.55);border-radius:14px 10px 15px 11px}.reward-showcase img{display:block;width:100%;border-radius:9px 6px 9px 6px}.reward-caption{text-align:center;color:var(--lav);font-size:11px;letter-spacing:1px;margin-top:8px}.reward-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}.reward-item{padding:8px;background:rgba(255,254,247,.72);border:1px dashed rgba(157,154,197,.55);border-radius:13px 9px 12px 10px;box-shadow:2px 3px 0 rgba(217,213,231,.35)}.reward-item img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:9px 6px 9px 6px}.reward-item h3{margin:8px 2px 2px;color:var(--lav);font-size:14px;text-align:center}.reward-item p{margin:0 2px;color:#85819b;font-size:10px;line-height:1.45;text-align:center}.reward-item.wide{grid-column:1/-1}.reward-item.wide img{aspect-ratio:2000/1124;object-fit:cover}.reward-item.wide h3{font-size:15px}.cta{padding:49px 22px 55px;text-align:center;background:linear-gradient(180deg,rgba(220,217,236,.33),rgba(255,249,233,.3))}.cta p{font-size:13px;margin:11px 0 20px}.thanks{color:#85819b;font-size:13px;text-align:center}.signature{margin-top:17px;color:var(--lav);font-family:"Songti SC","STSong",serif;font-size:18px;letter-spacing:2px;text-align:center}footer{padding:18px;text-align:center;border-top:1px dashed var(--line);color:#aaa6bb;font-size:10px}
+    @media(max-width:560px){header{padding-right:16px;padding-left:16px}.nav{gap:11px}.hero{min-height:590px;padding-right:16px;padding-left:16px}.hero-card{padding-right:13px;padding-left:13px}.section{padding:37px 17px}.result-row{grid-template-columns:37px 73px 1fr;gap:6px}.result-name{font-size:14px}.result-copy{font-size:10px}.reward-gallery{gap:8px}.reward-item{padding:6px}.reward-item h3{font-size:12px}.reward-item p{font-size:9px}.reward-item.wide h3{font-size:13px}.cta{padding-right:17px;padding-left:17px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <a class="brand" href="index.html">CHEN ZHEYUAN</a>
+      <nav class="nav"><a href="index.html">主页面</a><a href="#report">战报</a><a href="#reward">奖励</a><a href="#thanks">感谢</a></nav>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-card">
+        <p class="eyebrow">FINAL · FOUR TO ONE</p>
+        <h1>魔法属性 PK<span>四进一 · 圆满结束</span></h1>
+        <p class="hero-copy">「把黑夜点燃云包场」之远宇宙魔法属性 PK 圆满收官，感谢每一位学员为陈善的到来全力助力。</p>
+      </div>
+      <span class="hero-caption">BELIEVE IN MAGIC · LET YOUR HEART SHINE</span>
+    </section>
+
+    <section class="section" id="report">
+      <div class="heading"><span class="en">FINAL REPORT · MAGIC ATTRIBUTES</span><h2>四进一战报</h2><div class="divider">✦　✧　✦</div></div>
+      <p class="intro">恭喜演技粉拿下「把黑夜点燃」云包场冠名权！本次属性 PK 没有输赢，四种属性共同组成了我们喜欢的陈哲远。</p>
+      <div class="report-block">
+        <div class="report-title">TOP 01 · 冠名权</div>
+        <div class="result-list">
+          <div class="result-row"><span class="result-rank">NO.1</span><span class="result-name">演技粉</span><span class="result-copy">始于演技，忠于实力，TOP 属性实至名归！</span></div>
+          <div class="result-row"><span class="result-rank">NO.2</span><span class="result-name">生命粉</span><span class="result-copy">始终愿他平安顺遂，是最温柔、最稳固的底气。</span></div>
+          <div class="result-row"><span class="result-rank">NO.3</span><span class="result-name">智性粉</span><span class="result-copy">喜欢他的通透自持、聪慧沉稳，是理性的双向奔赴。</span></div>
+          <div class="result-row"><span class="result-rank">NO.4</span><span class="result-name">声控粉</span><span class="result-copy">声动人心，以声倾心，专属偏爱这独一无二的魅力。</span></div>
+        </div>
+      </div>
+      <div class="honor">✦ 每一个闪光点，都是我们爱的模样。感谢大家积极参与，全力助力陈善的到来，这段时间大家辛苦啦！</div>
+    </section>
+
+    <section class="section" id="reward">
+      <div class="heading"><span class="en">MILESTONE REWARD · UNLOCKED</span><h2>第三轮里程碑奖励</h2><div class="divider">✦　✧　✦</div></div>
+      <div class="milestone">
+        <h3>恭喜大家共同解锁里程碑奖励</h3>
+        <p>能量值 <strong>≥ 60</strong> 的学员可获得 <strong>OK 绷贴纸 + 学生证 + 票</strong>。</p>
+      </div>
+      <div class="reward-gallery" aria-label="活动奖品图鉴">
+        <article class="reward-item">
+          <img src="assets/reward-small-card.jpg" alt="个人能量值 30 小卡奖品图">
+          <h3>小卡</h3>
+          <p>个人能量值达 30 可解锁</p>
+        </article>
+        <article class="reward-item">
+          <img src="assets/reward-keychain.jpg" alt="个人能量值 100 钥匙扣奖品图">
+          <h3>钥匙扣</h3>
+          <p>个人能量值达 100 可解锁</p>
+        </article>
+        <article class="reward-item">
+          <img src="assets/reward-certificate-card.jpg" alt="证书卡奖品图">
+          <h3>证书卡</h3>
+          <p>个人能量值达 150 可解锁</p>
+        </article>
+        <article class="reward-item">
+          <img src="assets/reward-card-sleeve.jpg" alt="卡套奖品图">
+          <h3>卡套</h3>
+          <p>个人能量值达 300 可解锁</p>
+        </article>
+        <article class="reward-item">
+          <img src="assets/reward-stickers.jpg" alt="总魔法值 15 万贴纸奖品图">
+          <h3>贴纸</h3>
+          <p>总魔法值达 15 万解锁</p>
+        </article>
+        <article class="reward-item">
+          <img src="assets/reward-student-id.jpg" alt="学生证奖品图">
+          <h3>学生证</h3>
+          <p>总魔法值达 30 万解锁</p>
+        </article>
+        <article class="reward-item">
+          <img src="assets/reward-ticket.jpg" alt="票根奖品图">
+          <h3>票根</h3>
+          <p>总魔法值达 45 万解锁</p>
+        </article>
+        <article class="reward-item wide">
+          <img src="assets/reward-top10-cards.jpg" alt="前十属性小卡全图鉴">
+          <h3>前十属性小卡全图鉴</h3>
+          <p>前十属性专属奖励展示</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta" id="thanks">
+      <div class="heading"><span class="en">THANK YOU, YOUNG WIZARDS</span><h2>把黑夜点燃</h2><div class="divider">✦　✧　✦</div></div>
+      <p class="thanks">本次属性 PK 没有输赢，恰恰全方位表现了 <strong>@陈哲远-</strong> 的个人魅力与全方位闪光点。愿我们继续把喜欢好好收藏，也期待陈善的到来。</p>
+      <p class="signature">远宇宙米饭制造厂</p>
+    </section>
+
+    <footer>© 2026 陈哲远粉丝支持站 · 非官方个人应援网页</footer>
+  </main>
+</body>
+</html>
