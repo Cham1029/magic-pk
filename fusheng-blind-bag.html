@@ -47,7 +47,7 @@
       background: rgba(36, 26, 18, .9);
       backdrop-filter: blur(8px);
     }
-    .brand, .back-link {
+    .brand, .header-link {
       color: var(--gold-bright);
       text-decoration: none;
     }
@@ -56,7 +56,12 @@
       font-size: 14px;
       letter-spacing: 3px;
     }
-    .back-link {
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-link {
       padding: 6px 12px;
       border: 1px solid rgba(243, 212, 123, .7);
       font-size: 12px;
@@ -95,6 +100,34 @@
       color: var(--muted);
       font-size: 13px;
       line-height: 1.9;
+    }
+    .purchase-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 218px;
+      min-height: 52px;
+      padding: 0 27px;
+      margin-top: 25px;
+      border: 1px solid var(--gold-bright);
+      color: #25170c;
+      background: var(--gold-bright);
+      box-shadow: 0 9px 24px rgba(0, 0, 0, .2);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-decoration: none;
+      transition: transform .18s ease, background .18s ease;
+    }
+    .purchase-link:hover {
+      background: #fff0b7;
+      transform: translateY(-2px);
+    }
+    .shipping-note {
+      margin: 14px 0 0;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .7px;
     }
     .catalog-shell {
       padding: 0 24px 70px;
@@ -549,10 +582,13 @@
     @media (max-width: 560px) {
       header { padding: 13px 16px; }
       .brand { font-size: 11px; letter-spacing: 2px; }
-      .back-link { padding: 5px 9px; font-size: 11px; }
+      .header-actions { gap: 6px; }
+      .header-link { padding: 5px 8px; font-size: 10px; }
       .hero { padding: 32px 17px 42px; }
       h1 { font-size: clamp(24px, 8vw, 34px); letter-spacing: 3px; }
       .hero-copy { font-size: 12px; }
+      .purchase-link { min-width: 200px; min-height: 48px; margin-top: 21px; font-size: 13px; }
+      .shipping-note { margin-top: 12px; font-size: 11px; }
       .catalog-shell { padding: 0 12px 48px; }
       .progress-panel { margin-bottom: 27px; }
       .metric strong { font-size: 21px; }
@@ -577,12 +613,17 @@
   <main class="page">
     <header>
       <a class="brand" href="index.html">CHEN ZHEYUAN</a>
-      <a class="back-link" href="index.html">返回主页</a>
+      <nav class="header-actions" aria-label="页面导航">
+        <a class="header-link" href="collection.html?activity=fusheng-blind-bag">收藏工作台</a>
+        <a class="header-link" href="index.html">返回主页</a>
+      </nav>
     </header>
     <section class="hero">
       <p class="eyebrow">COLLABORATION · BLIND BAG</p>
       <h1>浮生 × 好好吃饭<span>联名盲袋</span></h1>
       <p class="hero-copy">浮生一梦，与你好好吃饭。把每一张小卡收进属于你的联名图鉴。</p>
+      <a class="purchase-link" href="https://k.youshop10.com/g7cyKoSF?a=b&amp;p=iphone&amp;wfr=BuyercopyURL&amp;share_relation=6a6f84c98ff098b1_1615025609_1" target="_blank" rel="noopener noreferrer">立即购买盲袋</a>
+      <p class="shipping-note">卡片在盲袋发货以后才能收集。</p>
     </section>
     <section class="catalog-shell" id="catalog">
       <div class="progress-panel" aria-label="收集进度">
@@ -763,12 +804,12 @@
         summary: "每包包含 4 张随机浮生小卡。图鉴收录 5 款小卡和 2 款高仿真拍立得。",
         groups: [
           { title: "小卡 · 5 款", className: "asset-group--five", items: [
-            ["A-S01", "小卡 01", "assets/fusheng-a-small-01.jpg"], ["A-S02", "小卡 02", "assets/fusheng-a-small-02.jpg"],
-            ["A-S03", "小卡 03", "assets/fusheng-a-small-03.jpg"], ["A-S04", "小卡 04", "assets/fusheng-a-small-04.jpg"],
-            ["A-S05", "小卡 05", "assets/fusheng-a-small-05.jpg"]
+            ["A-S01", "小卡 01", "assets/activities/fusheng-blind-bag/cards/set-a/fusheng-a-small-01.jpg"], ["A-S02", "小卡 02", "assets/activities/fusheng-blind-bag/cards/set-a/fusheng-a-small-02.jpg"],
+            ["A-S03", "小卡 03", "assets/activities/fusheng-blind-bag/cards/set-a/fusheng-a-small-03.jpg"], ["A-S04", "小卡 04", "assets/activities/fusheng-blind-bag/cards/set-a/fusheng-a-small-04.jpg"],
+            ["A-S05", "小卡 05", "assets/activities/fusheng-blind-bag/cards/set-a/fusheng-a-small-05.jpg"]
           ]},
           { title: "高仿真拍立得 · 2 款", className: "asset-group--instax", items: [
-            ["A-I01", "拍立得 01", "assets/fusheng-a-instax-01.jpg"], ["A-I02", "拍立得 02", "assets/fusheng-a-instax-02.jpg"]
+            ["A-I01", "拍立得 01", "assets/activities/fusheng-blind-bag/cards/set-a/fusheng-a-instax-01.jpg"], ["A-I02", "拍立得 02", "assets/activities/fusheng-blind-bag/cards/set-a/fusheng-a-instax-02.jpg"]
           ]}
         ]
       },
@@ -777,12 +818,12 @@
         summary: "每包包含 4 张随机吃饭小卡。图鉴收录 5 款小卡和 2 款高仿真拍立得。",
         groups: [
           { title: "小卡 · 5 款", className: "asset-group--five", items: [
-            ["B-S01", "小卡 01", "assets/fusheng-b-small-01.jpg"], ["B-S02", "小卡 02", "assets/fusheng-b-small-02.jpg"],
-            ["B-S03", "小卡 03", "assets/fusheng-b-small-03.jpg"], ["B-S04", "小卡 04", "assets/fusheng-b-small-04.jpg"],
-            ["B-S05", "小卡 05", "assets/fusheng-b-small-05.jpg"]
+            ["B-S01", "小卡 01", "assets/activities/fusheng-blind-bag/cards/set-b/fusheng-b-small-01.jpg"], ["B-S02", "小卡 02", "assets/activities/fusheng-blind-bag/cards/set-b/fusheng-b-small-02.jpg"],
+            ["B-S03", "小卡 03", "assets/activities/fusheng-blind-bag/cards/set-b/fusheng-b-small-03.jpg"], ["B-S04", "小卡 04", "assets/activities/fusheng-blind-bag/cards/set-b/fusheng-b-small-04.jpg"],
+            ["B-S05", "小卡 05", "assets/activities/fusheng-blind-bag/cards/set-b/fusheng-b-small-05.jpg"]
           ]},
           { title: "高仿真拍立得 · 2 款", className: "asset-group--instax", items: [
-            ["B-I01", "拍立得 01", "assets/fusheng-b-instax-01.jpg"], ["B-I02", "拍立得 02", "assets/fusheng-b-instax-02.jpg"]
+            ["B-I01", "拍立得 01", "assets/activities/fusheng-blind-bag/cards/set-b/fusheng-b-instax-01.jpg"], ["B-I02", "拍立得 02", "assets/activities/fusheng-blind-bag/cards/set-b/fusheng-b-instax-02.jpg"]
           ]}
         ]
       },
@@ -790,25 +831,25 @@
         id: "personal", number: "03", title: "个人满赠",
         summary: "下单首袋累计计算，随订单发出。每个下单账号单独计算。",
         groups: [
-          { title: "累计 3 包 · 加赠小卡 ×1", threshold: 3, className: "asset-group--single", items: [["P03", "个人加赠小卡", "assets/fusheng-personal-03.jpg"]] },
-          { title: "累计 7 包 · 包挂 ×1", threshold: 7, className: "asset-group--single", items: [["P07-K", "包挂", "assets/fusheng-personal-keychain.jpg"]] },
-          { title: "累计 10 包 · 浮生滴胶冰箱贴 ×4", threshold: 10, className: "asset-group--single", items: [["P10-S", "浮生滴胶冰箱贴 ×4", "assets/fusheng-personal-stickers.jpg"]] }
+          { title: "累计 3 包 · 加赠小卡 ×1", threshold: 3, className: "asset-group--single", items: [["P03", "个人加赠小卡", "assets/activities/fusheng-blind-bag/rewards/personal/fusheng-personal-03.jpg"]] },
+          { title: "累计 7 包 · 包挂 ×1", threshold: 7, className: "asset-group--single", items: [["P07-K", "包挂", "assets/activities/fusheng-blind-bag/rewards/personal/fusheng-personal-keychain.jpg"]] },
+          { title: "累计 10 包 · 浮生滴胶冰箱贴 ×4", threshold: 10, className: "asset-group--single", items: [["P10-S", "浮生滴胶冰箱贴 ×4", "assets/activities/fusheng-blind-bag/rewards/personal/fusheng-personal-stickers.jpg"]] }
         ]
       },
       {
         id: "collective", number: "04", title: "集体加赠",
         summary: "全员可得，随盲袋发出。销量达到对应门槛后解锁。",
         groups: [
-          { title: "销量达 520 · 2025 生日小卡 ×1", threshold: 520, className: "asset-group--single", items: [["C520", "2025 生日小卡", "assets/fusheng-collective-520.jpg"]] },
-          { title: "销量达 1029 · 2024 生日小卡 ×1", threshold: 1029, className: "asset-group--single", items: [["C1029", "2024 生日小卡", "assets/fusheng-collective-1029.jpg"]] },
-          { title: "销量达 2029 · 2023 生日小卡 ×1", threshold: 2029, className: "asset-group--single", items: [["C2029", "2023 生日小卡", "assets/fusheng-collective-2029.jpg"]] }
+          { title: "销量达 520 · 2025 生日小卡 ×1", threshold: 520, className: "asset-group--single", items: [["C520", "2025 生日小卡", "assets/activities/fusheng-blind-bag/rewards/collective/fusheng-collective-520.jpg"]] },
+          { title: "销量达 1029 · 2024 生日小卡 ×1", threshold: 1029, className: "asset-group--single", items: [["C1029", "2024 生日小卡", "assets/activities/fusheng-blind-bag/rewards/collective/fusheng-collective-1029.jpg"]] },
+          { title: "销量达 2029 · 2023 生日小卡 ×1", threshold: 2029, className: "asset-group--single", items: [["C2029", "2023 生日小卡", "assets/activities/fusheng-blind-bag/rewards/collective/fusheng-collective-2029.jpg"]] }
         ]
       },
       {
         id: "special", number: "05", title: "特别分享",
         summary: "带指定话题发布活动宣传，单条满 38 赞即可获得分享礼一张。",
         groups: [
-          { title: "分享礼 · 活动下架即截止", className: "asset-group--single", items: [["X01", "特别分享礼", "assets/fusheng-special-share.jpg"]] }
+          { title: "分享礼 · 活动下架即截止", className: "asset-group--single", items: [["X01", "特别分享礼", "assets/activities/fusheng-blind-bag/rewards/special/fusheng-special-share.jpg"]] }
         ]
       }
     ];
@@ -840,6 +881,7 @@
 
     function getQuantity(id) { return Number(collection[id] || 0); }
     function isSetCard(set) { return set.id === "A" || set.id === "B"; }
+    function isManualCollectible(set) { return isSetCard(set) || set.id === "special"; }
     function setItems(set) { return set.groups.flatMap(group => group.items); }
     function groupAchieved(set, group) {
       if (set.id === "personal") return purchasedBags >= group.threshold;
@@ -850,8 +892,8 @@
       const term = search.value.trim().toLowerCase();
       const setMatch = setFilter.value === "all" || setFilter.value === set.id;
       const text = [set.title, set.summary, ...setItems(set).flat()].join(" ").toLowerCase();
-      const hasCollected = isSetCard(set) && setItems(set).some(item => getQuantity(item[0]) > 0);
-      const hasUncollected = isSetCard(set) && setItems(set).some(item => getQuantity(item[0]) === 0);
+      const hasCollected = isManualCollectible(set) && setItems(set).some(item => getQuantity(item[0]) > 0);
+      const hasUncollected = isManualCollectible(set) && setItems(set).some(item => getQuantity(item[0]) === 0);
       const giftStatuses = set.groups.filter(group => group.threshold).map(group => groupAchieved(set, group));
       const statusMatch = statusFilter.value === "all"
         || (statusFilter.value === "collected" && (hasCollected || giftStatuses.includes(true)))
@@ -864,17 +906,17 @@
       updateMetrics();
     }
     function updateMetrics() {
-      const collectibleItems = sets.filter(isSetCard).flatMap(setItems);
+      const collectibleItems = sets.filter(isManualCollectible).flatMap(setItems);
       const collected = collectibleItems.filter(item => getQuantity(item[0]) > 0).length;
       document.getElementById("total-count").textContent = collectibleItems.length;
       document.getElementById("collected-count").textContent = collected;
       document.getElementById("completion-rate").textContent = Math.round(collected / collectibleItems.length * 100) + "%";
-      document.getElementById("notes").textContent = "SET A/B 的每张卡面独立记录数量；个人满赠和集体加赠根据门槛自动显示状态。卡面均由方案图中的对应区域单独截取。";
+      document.getElementById("notes").textContent = "SET A/B 与特别分享礼可独立记录数量；个人满赠和集体加赠根据门槛自动显示状态。卡面均由方案图中的对应区域单独截取。";
     }
     function renderAsset(set, item) {
       const [id, label, image] = item;
       const quantity = getQuantity(id);
-      const trackable = isSetCard(set);
+      const trackable = isManualCollectible(set);
       const viewStart = trackable
         ? `<button class="asset-view" type="button" data-open-asset="${id}" data-set-id="${set.id}" aria-label="查看 ${label}">`
         : `<div class="asset-view">`;
@@ -901,10 +943,10 @@
     function render() {
       const visibleSets = sets.filter(setMatches);
       visibleCount.textContent = "显示 " + visibleSets.length + " 个套组";
-      grid.innerHTML = visibleSets.length ? visibleSets.map(set => `<article class="set-section ${isSetCard(set) && setItems(set).every(item => getQuantity(item[0]) > 0) ? "is-collected" : ""}">
+      grid.innerHTML = visibleSets.length ? visibleSets.map(set => `<article class="set-section ${isManualCollectible(set) && setItems(set).every(item => getQuantity(item[0]) > 0) ? "is-collected" : ""}">
         <div class="set-header">
           <div><span class="set-index">PART ${set.number}</span><h3 class="set-title">${set.title}</h3><p class="set-summary">${set.summary}</p></div>
-          ${isSetCard(set) ? '<span class="auto-status">卡面图鉴</span>' : set.id === "special" ? '<span class="auto-status">活动条件</span>' : ""}
+          ${isSetCard(set) ? '<span class="auto-status">卡面图鉴</span>' : set.id === "special" ? '<span class="auto-status">手动记录</span>' : ""}
         </div>
         ${isGiftSet(set) ? renderGiftOriginal(set) : set.groups.map(group => `<div class="asset-group ${group.className || ""}"><h4 class="asset-group-title">${group.title}${group.threshold ? `<span class="gift-status ${groupAchieved(set, group) ? "is-achieved" : ""}">${groupAchieved(set, group) ? "已达成" : "未达成"}</span>` : ""}</h4><div class="asset-grid">${group.items.map(item => renderAsset(set, item)).join("")}</div></div>`).join("")}
       </article>`).join("") : "<div class=\"empty-state\">没有找到符合条件的套组</div>";
@@ -920,15 +962,15 @@
       dialogImage.alt = item[1];
       dialogKicker.textContent = set.title + " · " + item[0];
       dialogTitle.textContent = item[1];
-      dialogCopy.textContent = isSetCard(set) ? "当前收集数量：" + (quantity || 0) + " 张。" : "此项状态由活动门槛自动判断，不需要手动点击收集。";
-      dialogActions.hidden = !isSetCard(set);
+      dialogCopy.textContent = isManualCollectible(set) ? "当前收集数量：" + (quantity || 0) + " 张。" : "此项状态由活动门槛自动判断，不需要手动点击收集。";
+      dialogActions.hidden = !isManualCollectible(set);
       if (typeof dialog.showModal === "function" && !dialog.open) dialog.showModal();
     }
     grid.addEventListener("click", event => {
       const asset = event.target.closest("[data-open-asset]");
       const cycle = event.target.closest("[data-asset-cycle]");
       if (asset) openAsset(asset.dataset.openAsset, asset.dataset.setId);
-      if (cycle) { collection[cycle.dataset.assetCycle] = (getQuantity(cycle.dataset.assetCycle) + 1) % 4; saveCollection(); }
+      if (cycle) { collection[cycle.dataset.assetCycle] = getQuantity(cycle.dataset.assetCycle) + 1; saveCollection(); }
     });
     [search, setFilter, statusFilter].forEach(control => {
       control.addEventListener("input", render);
@@ -948,7 +990,7 @@
     document.getElementById("dialog-close").addEventListener("click", () => dialog.close());
     dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
     dialog.querySelectorAll("[data-dialog-action]").forEach(button => button.addEventListener("click", () => {
-      if (!activeAssetId || !activeSetId || !isSetCard(sets.find(set => set.id === activeSetId))) return;
+      if (!activeAssetId || !activeSetId || !isManualCollectible(sets.find(set => set.id === activeSetId))) return;
       collection[activeAssetId] = button.dataset.dialogAction === "collect" ? getQuantity(activeAssetId) + 1 : 0;
       saveCollection();
       openAsset(activeAssetId, activeSetId);

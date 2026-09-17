@@ -95,7 +95,7 @@
       content: "";
       position: absolute;
       inset: 38px 26px 72px;
-      background: url("assets/reference-plan.jpg") center 4% / 100% auto no-repeat;
+      background: url("assets/shared/home/reference-plan.jpg") center 4% / 100% auto no-repeat;
       filter: saturate(1.25) contrast(.98);
     }
     .photo-card::after {
@@ -264,6 +264,78 @@
       letter-spacing: 26px;
       text-align: center;
     }
+    .collection-entry {
+      padding-top: 0;
+      padding-bottom: 72px;
+    }
+    .collection-entry-link {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: center;
+      width: min(100%, 760px);
+      min-height: 154px;
+      padding: 28px 34px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 2px solid var(--line);
+      color: var(--ink);
+      background: rgba(239, 255, 218, .74);
+      text-decoration: none;
+      transition: transform .18s ease, background .18s ease;
+    }
+    .collection-entry-link::before {
+      content: "COLLECT";
+      position: absolute;
+      right: -16px;
+      bottom: -39px;
+      color: rgba(56, 165, 38, .10);
+      font-family: var(--serif);
+      font-size: 96px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      pointer-events: none;
+    }
+    .collection-entry-link:hover {
+      background: rgba(223, 255, 186, .92);
+      transform: translateY(-3px);
+    }
+    .collection-entry-copy,
+    .collection-entry-action { position: relative; z-index: 1; }
+    .collection-entry-eyebrow {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .collection-entry-title {
+      margin: 0;
+      color: var(--ink-dark);
+      font-family: var(--hand);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 400;
+      line-height: 1.1;
+    }
+    .collection-entry-copy p {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 15px;
+    }
+    .collection-entry-action {
+      padding: 9px 15px 11px;
+      border: 2px solid var(--line);
+      background: var(--paper);
+      color: var(--ink-dark);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
     .timeline-section { padding-top: 8px; }
     .timeline-title {
       margin-bottom: 48px;
@@ -415,7 +487,7 @@
     .bottom-photo {
       min-height: 300px;
       margin: 0 -48px;
-      background: url("assets/reference-plan.jpg") center bottom / 100% auto no-repeat;
+      background: url("assets/shared/home/reference-plan.jpg") center bottom / 100% auto no-repeat;
       filter: saturate(1.2);
     }
 
@@ -431,6 +503,7 @@
       .cover-title-row { margin-top: -34px; }
       .main-title { margin-bottom: 100px; }
       .section { padding-right: 24px; padding-left: 24px; }
+      .collection-entry-link { padding: 25px 27px; }
       .table-box { padding: 55px 17px 20px; overflow-x: auto; }
       .plan-table { min-width: 780px; }
       .notice { padding-right: 24px; padding-left: 24px; }
@@ -451,6 +524,9 @@
       .script-mark::before { left: -42px; right: -35px; height: 55px; border-width: 4px; }
       .label-box { min-height: 47px; padding: 5px 20px 8px; }
       .section { padding-right: 18px; padding-bottom: 60px; padding-left: 18px; }
+      .collection-entry { padding-bottom: 58px; }
+      .collection-entry-link { grid-template-columns: 1fr; gap: 17px; min-height: 0; padding: 24px 21px; }
+      .collection-entry-action { width: fit-content; }
       .table-box { margin-right: -4px; margin-left: -4px; }
       .plan-table { min-width: 650px; font-size: 15px; }
       .plan-table th { font-size: 12px; }
@@ -546,7 +622,15 @@
               <td>余量售后中</td>
               <td>9/8</td>
               <td>非严重大瑕不再售后</td>
-              <td>未出</td>
+              <td>已出</td>
+            </tr>
+            <tr>
+              <td>远宇宙属性魔法学院</td>
+              <td>－</td>
+              <td>等待补邮通知</td>
+              <td>－</td>
+              <td>－</td>
+              <td>－</td>
             </tr>
             <tr>
               <td class="compact-lines">【把黑夜点燃】<br>云包场PART1<br>择善寻真</td>
@@ -568,6 +652,17 @@
         </table>
         <div class="love-mark">LOVEFORCHAM</div>
       </div>
+    </section>
+
+    <section class="section collection-entry" aria-labelledby="collection-entry-title">
+      <a class="collection-entry-link" href="collection.html?activity=draw-card">
+        <div class="collection-entry-copy">
+          <span class="collection-entry-eyebrow">CHEN ZHEYUAN COLLECTION</span>
+          <h2 class="collection-entry-title" id="collection-entry-title">远宇宙收藏工作台</h2>
+          <p>按活动查看图鉴，记录每一次拥有。</p>
+        </div>
+        <span class="collection-entry-action">进入图鉴</span>
+      </a>
     </section>
 
     <section class="section timeline-section">
@@ -595,7 +690,8 @@
             <a class="item-title activity-link" href="fusheng-blind-bag.html">浮生x好好吃饭联名盲袋</a>
             <p>时间：属性PK结束后</p>
             <p>目的：陈哲远生日应援</p>
-            <p>进度：已企划</p>
+            <p>进度：已企划 · <a class="activity-inline-link" href="activities.html">活动图鉴中心</a></p>
+            <p>图鉴：<a class="activity-inline-link" href="collection.html?activity=fusheng-blind-bag">进入收藏工作台</a></p>
           </div>
         </article>
         <article class="item left three">
