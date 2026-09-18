@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fbfff4">
+  <meta name="theme-color" content="#eef6f8">
   <title>2026 活动计划｜CHENZHEYUAN</title>
   <style>
     :root {
@@ -444,6 +444,30 @@
       color: inherit;
       text-decoration: none;
     }
+    .item-title.activity-link {
+      position: relative;
+      padding-right: 30px;
+      border-color: var(--ink);
+      background: rgba(222, 240, 244, .94);
+      box-shadow: 3px 3px 0 rgba(121, 175, 193, .24);
+      cursor: pointer;
+    }
+    .item-title.activity-link::after {
+      content: "↗";
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      color: var(--ink-dark);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+    .item-title.activity-link:hover {
+      background: #d2e9ee;
+      box-shadow: 4px 4px 0 rgba(121, 175, 193, .3);
+      transform: translate(-1px, -1px);
+    }
     .activity-link:hover,
     .activity-inline-link:hover {
       color: var(--ink-dark);
@@ -567,6 +591,227 @@
       .bottom-photo { min-height: 175px; margin-right: -18px; margin-left: -18px; }
     }
   </style>
+  <style id="yuan-universe-style">
+    :root {
+      --paper: #fffdfa;
+      --wash: #e8f3f6;
+      --ink: #4c7285;
+      --ink-dark: #244b62;
+      --muted: #78909a;
+      --line: #79afc1;
+      --line-soft: rgba(121, 175, 193, .34);
+      --serif: "Songti SC", "STSong", "Times New Roman", serif;
+      --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --hand: "HanziPen SC", "STKaiti", "KaiTi", "Bradley Hand", cursive;
+    }
+
+    body {
+      color: var(--ink);
+      background: #dfeaf0;
+      font-family: var(--sans);
+    }
+
+    .page {
+      background:
+        radial-gradient(rgba(71, 112, 130, .06) .65px, transparent .8px) 0 0 / 8px 8px,
+        linear-gradient(180deg, #f9fcfc 0%, #fffdfa 50%, #f4f9fa 100%);
+      box-shadow: 0 0 45px rgba(44, 83, 101, .16);
+    }
+
+    .topline {
+      color: var(--ink-dark);
+    }
+
+    .side-word,
+    .brand,
+    .main-title,
+    .script-mark,
+    .subtitle,
+    .collection-entry-title,
+    .timeline-year,
+    .thanks,
+    .footer-title {
+      color: var(--ink-dark);
+    }
+
+    .photo-card {
+      min-height: 500px;
+      background: rgba(218, 235, 240, .72);
+      box-shadow: 8px 10px 0 rgba(126, 169, 184, .16);
+    }
+
+    .photo-card::before {
+      inset: 0;
+      background: url("assets/shared/home/yuan-universe-banner.jpg") center / cover no-repeat;
+      filter: saturate(.9) contrast(.98);
+      opacity: .92;
+    }
+
+    .photo-card::after {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .18), transparent 36%),
+        radial-gradient(circle at 68% 38%, rgba(255, 255, 255, .22), transparent 28%);
+    }
+
+    .big-hand {
+      display: none;
+    }
+
+    .cover-title-row {
+      position: relative;
+      z-index: 4;
+      color: var(--ink-dark);
+    }
+
+    .hand-note {
+      color: #668a99;
+    }
+
+    .script-mark::before {
+      border-color: rgba(132, 185, 201, .34);
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    .script-mark small {
+      color: #7baabd;
+    }
+
+    .label-box {
+      border: 1px dashed var(--line);
+      background: rgba(232, 243, 246, .82);
+      color: var(--ink-dark);
+      box-shadow: 3px 4px 0 rgba(121, 175, 193, .12);
+    }
+
+    .table-box {
+      border: 1px solid rgba(121, 175, 193, .76);
+      background:
+        linear-gradient(135deg, rgba(255, 253, 250, .96), rgba(231, 243, 246, .9) 52%, rgba(255, 253, 250, .98));
+      box-shadow: 6px 7px 0 rgba(121, 175, 193, .12);
+    }
+
+    .plan-table {
+      color: var(--ink);
+    }
+
+    .plan-table th {
+      color: #f9fcfc;
+      background: var(--ink-dark);
+    }
+
+    .collection-entry-link {
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: rgba(232, 243, 246, .72);
+      box-shadow: 5px 6px 0 rgba(121, 175, 193, .13);
+    }
+
+    .collection-entry-link::before {
+      color: rgba(76, 114, 133, .1);
+    }
+
+    .collection-entry-link:hover {
+      background: rgba(218, 237, 242, .92);
+    }
+
+    .collection-entry-eyebrow,
+    .collection-entry-copy p {
+      color: var(--muted);
+    }
+
+    .collection-entry-action,
+    .item-title {
+      border: 1px dashed var(--line);
+      background: rgba(255, 253, 250, .9);
+      color: var(--ink-dark);
+    }
+    .timeline-hint {
+      margin: -28px auto 34px;
+      color: var(--muted);
+      font-family: var(--hand);
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .timeline::before {
+      background: linear-gradient(180deg, transparent, #79afc1 4%, #79afc1 96%, transparent);
+    }
+
+    .node {
+      background: #79afc1;
+      box-shadow: 0 0 0 2px #a9ced8;
+    }
+
+    .item {
+      color: var(--muted);
+    }
+
+    .item-flower {
+      color: var(--ink);
+    }
+
+    .rule {
+      background: var(--ink-dark);
+    }
+
+    .bottom-photo {
+      background-image: url("assets/shared/home/yuan-universe-banner.jpg");
+      filter: saturate(.9);
+    }
+
+    @media (max-width: 560px) {
+      .timeline-hint {
+        margin: -22px auto 26px;
+        font-size: 16px;
+      }
+
+      .photo-card {
+        min-height: 300px;
+      }
+
+      .cover-title-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2px;
+        margin-top: -14px;
+        padding: 0 3px;
+      }
+
+      .brand {
+        font-size: 27px;
+      }
+
+      .hand-note {
+        font-size: 17px;
+      }
+
+      .main-title {
+        width: 100%;
+        padding: 0 8px;
+        font-size: 22px;
+        line-height: 1.28;
+        overflow-wrap: anywhere;
+      }
+
+      .script-mark {
+        max-width: 100%;
+        font-size: 25px;
+        white-space: normal;
+      }
+
+      .subtitle {
+        padding: 0 8px;
+        font-size: 17px;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+      }
+
+      .quote {
+        font-size: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
   <main class="page">
@@ -609,6 +854,14 @@
           </thead>
           <tbody>
             <tr>
+              <td>远宇宙属性魔法学院</td>
+              <td>－</td>
+              <td>等待补邮通知</td>
+              <td>－</td>
+              <td>－</td>
+              <td>－</td>
+            </tr>
+            <tr>
               <td>远宇宙地域PK战</td>
               <td>－</td>
               <td>已完成补邮</td>
@@ -623,14 +876,6 @@
               <td>9/8</td>
               <td>非严重大瑕不再售后</td>
               <td>已出</td>
-            </tr>
-            <tr>
-              <td>远宇宙属性魔法学院</td>
-              <td>－</td>
-              <td>等待补邮通知</td>
-              <td>－</td>
-              <td>－</td>
-              <td>－</td>
             </tr>
             <tr>
               <td class="compact-lines">【把黑夜点燃】<br>云包场PART1<br>择善寻真</td>
@@ -667,6 +912,7 @@
 
     <section class="section timeline-section">
       <h2 class="label-box timeline-title">2026年 远宇宙Q3 Q4活动计划</h2>
+      <p class="timeline-hint">点击进入活动页面</p>
       <div class="timeline">
         <div class="timeline-year">2026年</div>
         <span class="node top"></span>
