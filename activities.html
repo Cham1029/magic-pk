@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#221811">
+  <title>活动图鉴中心｜CHENZHEYUAN</title>
+  <style>
+    :root { --ink: #241a12; --brown: #4c3522; --gold: #d6ad58; --cream: #faecd0; --muted: #b99b6e; --line: rgba(214, 173, 88, .36); --page: #18110c; --serif: "Songti SC", "STSong", serif; --sans: "PingFang SC", "Microsoft YaHei", sans-serif; }
+    * { box-sizing: border-box; }
+    body { min-width: 320px; margin: 0; color: var(--cream); background: var(--page); font-family: var(--sans); }
+    .page { width: min(100%, 980px); min-height: 100vh; margin: 0 auto; padding: 0 28px 68px; background: linear-gradient(180deg, #21170f, #34241a 52%, #20160f); box-shadow: 0 0 54px rgba(0, 0, 0, .38); }
+    header { display: flex; align-items: center; justify-content: space-between; min-height: 68px; border-bottom: 1px solid var(--line); }
+    a { color: inherit; text-decoration: none; }
+    .brand { color: #f0cf80; font-family: var(--serif); font-size: 14px; letter-spacing: 3px; }
+    .back { padding: 7px 10px; border: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    main { padding-top: 56px; }
+    .eyebrow { margin: 0 0 12px; color: var(--gold); font-size: 11px; letter-spacing: 3px; }
+    h1 { margin: 0; color: #f3d47b; font: 500 clamp(30px, 5vw, 46px)/1.2 var(--serif); letter-spacing: 4px; }
+    .intro { max-width: 550px; margin: 18px 0 41px; color: var(--muted); font-size: 13px; line-height: 1.9; }
+    .activity-list { display: grid; gap: 17px; }
+    .activity { display: grid; grid-template-columns: 168px minmax(0, 1fr) auto; gap: 24px; align-items: center; min-height: 200px; padding: 17px; border: 1px solid var(--line); background: rgba(21, 15, 10, .44); }
+    .cover { aspect-ratio: 4 / 5; overflow: hidden; background: #352619; }
+    .cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .activity-kicker { margin: 0 0 8px; color: var(--gold); font-size: 10px; letter-spacing: 2px; }
+    h2 { margin: 0; color: var(--cream); font: 500 25px/1.3 var(--serif); letter-spacing: 2px; }
+    .activity-copy { max-width: 470px; margin: 11px 0 13px; color: var(--muted); font-size: 12px; line-height: 1.75; }
+    .features { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
+    .features li { padding: 4px 7px; border: 1px solid rgba(214, 173, 88, .25); color: #ddc28d; font-size: 10px; }
+    .action { min-width: 88px; padding: 10px 12px; border: 1px solid var(--gold); color: #f3d47b; font-size: 12px; text-align: center; }
+    .activity:not(.is-active) { opacity: .72; }
+    .availability { min-width: 88px; color: var(--muted); font-size: 12px; text-align: center; }
+    .empty { padding: 35px 0; color: var(--muted); font-size: 13px; }
+    @media (max-width: 660px) { .page { padding: 0 17px 45px; } main { padding-top: 39px; } .intro { margin-bottom: 27px; } .activity { grid-template-columns: 100px minmax(0, 1fr); gap: 14px; min-height: 0; padding: 12px; } .activity > :last-child { grid-column: 2; justify-self: start; } h2 { font-size: 19px; letter-spacing: 1px; } .activity-copy { margin: 7px 0 10px; font-size: 11px; } .features { display: none; } }
+  </style>
+  <script src="data/activities.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="index.html">CHEN ZHEYUAN</a>
+      <a class="back" href="index.html">返回主页</a>
+    </header>
+    <main>
+      <p class="eyebrow">ACTIVITY COLLECTIONS</p>
+      <h1>活动图鉴中心</h1>
+      <p class="intro">选择一个活动，进入它专属的图鉴与收集页面。每个活动保留自己的视觉、卡池和收集规则。</p>
+      <section class="activity-list" id="activity-list" aria-label="活动列表"></section>
+    </main>
+  </div>
+  <script>
+    const activityList = document.getElementById("activity-list");
+    const activities = window.CZY_ACTIVITY_REGISTRY || [];
+    activityList.innerHTML = activities.length ? activities.map(activity => {
+      const action = activity.status === "active"
+        ? `<a class="action" href="${activity.href}">进入活动</a>`
+        : `<span class="availability">${activity.statusLabel}</span>`;
+      return `<article class="activity ${activity.status === "active" ? "is-active" : ""}">
+        <div class="cover"><img src="${activity.cover}" alt="${activity.title}"></div>
+        <div>
+          <p class="activity-kicker">${activity.subtitle}</p>
+          <h2>${activity.title}</h2>
+          <p class="activity-copy">${activity.description}</p>
+          <ul class="features">${activity.features.map(feature => `<li>${feature}</li>`).join("")}</ul>
+        </div>
+        ${action}
+      </article>`;
+    }).join("") : '<p class="empty">活动正在整理中。</p>';
+  </script>
+</body>
+</html>
